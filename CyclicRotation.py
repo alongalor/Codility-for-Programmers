@@ -3,7 +3,5 @@ def solution(A, K):
         return A
     else:
         for i in range(K):
-            temp = []
-            temp += [A[-1]] + A[:-1]
-            A = temp
+            A = [A[-1]] + A[:-1]
         return A
