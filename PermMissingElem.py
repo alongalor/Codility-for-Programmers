@@ -1,11 +1,7 @@
 def solution(A):
-    d = {}
-    for i in range(1, len(A) + 2):
-        d[i] = 1
-    
+    lst = [0]*(len(A)+1)
     for i in A:
-        d[i] = 0
-        
-    for key, val in d.iteritems():
-        if val == 1:
-            return key
+        lst[i-1] = 1
+    for i in xrange(len(lst)+1):
+        if lst[i]==0:
+            return i+1
