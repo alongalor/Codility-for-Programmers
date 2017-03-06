@@ -1,9 +1,10 @@
 def solution(A):
-    d = {}
-    
+    lst = [0]*len(A)
     for i in A:
-        d[i] = d.get(i, 0) + 1
-    
-    for i in xrange(1,len(A)+2):
-        if d.get(i, 0) == 0:
-            return i
+        if 1<=i<=len(A):
+            lst[i-1] = 1
+    print lst
+    for i in xrange(len(lst)+1):
+        if lst[i]==0:
+            return i+1
+    return len(A)+1
