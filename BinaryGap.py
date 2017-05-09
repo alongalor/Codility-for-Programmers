@@ -1,15 +1,14 @@
 def solution(N):
     string = bin(N)[2:]
     
-    max = 0
+    maximum = 0
     count = 0
     
     for i in string:
         if i=='0':
             count += 1
         else:
-            if count > max:
-                max = count
+            maximum = max(maximum, count)
             count = 0
     
-    return max
+    return maximum
