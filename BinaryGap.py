@@ -1,5 +1,4 @@
 def solution(N):
-    
     string = bin(N)[2:]
     
     max = 0
@@ -12,4 +11,5 @@ def solution(N):
             if count > max:
                 max = count
             count = 0
+    
     return max
