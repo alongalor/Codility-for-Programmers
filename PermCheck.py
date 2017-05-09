@@ -1,9 +1,9 @@
 def solution(A):
-    lst = [0]*len(A)
-    for i in range(len(A)): 
-        if 1<=i<=len(A):
-            lst[A[i]-1] += 1  
-    if 0 in lst:
-        return 0
-    else: 
-        return 1
+    m = len(A)+1
+    lst = [0]*m
+    
+    for i in A:
+        if i<m:
+            lst[i] = 1
+            
+    return 0 if 0 in lst[1:] else 1
