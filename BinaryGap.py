@@ -12,5 +12,4 @@ def solution(N):
             if count > max:
                 max = count
             count = 0
-    
     return max
