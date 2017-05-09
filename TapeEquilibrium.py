@@ -6,6 +6,5 @@ def solution(A):
     for i in range(len(A)-1):
         num += A[i]
         result = abs(2*num - s)
-        if result < minimum:
-            minimum = result
+        minimum = min(result, minimum)
     return minimum
